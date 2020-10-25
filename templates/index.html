@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <style>
+             .header-image{background-color:red; padding:20px;}
+             input[type=submit] {
+              background-color: transparent;
+              border: 1px solid black;
+              color: black;
+              padding: 20px 20px;
+              margin: 20px 20px;
+              cursor: pointer;
+              border-radius:30%;
+           }
+           .center-text{text-align:center}
+        </style>
+        <meta charset="utf-8">
+        <title>House Price Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container header-image" align="center">
+            <h2 class='container-heading'><span class="heading_font"><i>House Price Predictor</i></span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    	    </div>
+    	</div><br>
+
+        <!-- Text Area -->
+    	<div class="ml-container" align="center">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <label for="neighborhood">Neighborhood:</label>
+				<input type="text" name="neighborhood" placeholder="Eg:-3 Value-Range(0-22)" required="required" class="center-text" /><br>
+                <label for="overallQual">OverallQuality:</label>
+				<input type="text" name="overallQual" placeholder="Eg:-5 Value-Range(1-10)" required="required" class="center-text" /><br>
+				<label for="yearRemodAdd">Remodeling:</label>
+                <input type="text" name="yearRemodAdd" placeholder="Eg:-20 Value-Range(0-60)" required="required" class="center-text" /><br>
+				<label for="roofStyle">RoofStyle:</label>
+                <input type="text" name="roofStyle" placeholder="Eg:-2 Value-Range(0-2)" required="required" class="center-text" /><br>
+                <label for="bsmtQual">Basement Quality:</label>
+				<input type="text" name="bsmtQual" placeholder="Eg:-1 Value-Range(1-4)" required="required" class="center-text" /><br>
+				<label for="bsmtExposure">Basement Exposure:</label>
+                <input type="text" name="bsmtExposure" placeholder="Eg:-4 Value-Range(1-4)" required="required" class="center-text" /><br>
+				<label for="1stFlrsf">1st Floor Surface:</label>
+                <input type="text" name="1stFlrsf" placeholder="Eg:-115" required="required" class="center-text" /><br>
+				<label for="grLivArea">Ground Living Area:</label>
+                <input type="text" name="grLivArea" placeholder="Eg:-150" required="required" class="center-text" /><br>
+				<label for="kitchenQual">Kitchen Quality:</label>
+                <input type="text" name="kitchenQual" placeholder="Eg:-0 Value-Range(0-3)" required="required" class="center-text" /><br>
+				<label for="fireplaces">Fire Place:</label>
+                <input type="text" name="fireplaces" placeholder="Eg:-1 Value-Range(0-3)" required="required" class="center-text" /><br>
+				<label for="fireplaceQu">Fire Place Quality:</label>
+                <input type="text" name="fireplaceQu" placeholder="Eg:-5 Value-Range(0-5)" required="required"class="center-text"  /><br>
+				<label for="garageType">Garage Type:</label>
+                <input type="text" name="garageType" placeholder="Eg:-3 Value-Range(1-5)" required="required" class="center-text" /><br>
+				<label for="garageFinish">Garage Finish:</label>
+                <input type="text" name="garageFinish" placeholder="Eg:-1 Value-Range(1-3)" required="required"  class="center-text" /><br>
+				<label for="garageCars">Garage Cars:</label>
+                <input type="text" name="garageCars" placeholder="Eg:-4 Value-Range(0-4)" required="required" class="center-text" /><br>
+				<label for="centralAir">Central Air:</label>
+                <input type="text" name="centralAir" placeholder="Eg:-1 Value-Range(0/1)" required="required" class="center-text" /><br>
+
+        		<input type="submit"  value="Predict">
+        	</form>
+        	
+        	<br>
+        	 {{ prediction_text }}
+    	</div><br>
+
+      <footer class="header-image" align="center">
+  	<p>Done by: Niraj Namaye</p>
+      </footer>
+
+    </body>
+</html>
