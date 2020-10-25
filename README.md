@@ -9,6 +9,7 @@ Deployed at:https://homepriceprediction-api.herokuapp.com/
 https://github.com/Niraj1995/House-Price-Prediction/blob/main/Model.py
 
 • Data Description
+
 Data Features With Categories - Data Code
 1. Neighborhood:-
 NAmes-8
