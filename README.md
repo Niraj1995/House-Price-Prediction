@@ -38,7 +38,7 @@ BrDale-1
 2. OverallQual
 Range Between 1 to 10
 
-3.YearRemodAdd
+3. YearRemodAdd
 Range Between 0 to 60
 
 4. RoofStyle:-
