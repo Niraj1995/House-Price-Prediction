@@ -94,12 +94,13 @@ Y - 1
 N - 0
 
 MODEL PROCESSES:-
-This project includes all lifecycle in these data science project
-1. Data Analysis
-2. Feature Engineering
-3. Feature Selection
-4. Model Building
-5. Model Deployment
+This project includes all lifecycle in these data science project.
+
+1. Data Analysis.
+2. Feature Engineering.
+3. Feature Selection.
+4. Model Building.
+5. Model Deployment.
 
 1. Data Analysis:-
 
