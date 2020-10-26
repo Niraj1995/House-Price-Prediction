@@ -93,4 +93,51 @@ Range 0 - 4
 Y - 1
 N - 0
 
+MODEL PROCESSES:-
+This project includes all lifecycle in these data science project
+1. Data Analysis
+2. Feature Engineering
+3. Feature Selection
+4. Model Building
+5. Model Deployment
 
+1. Data Analysis:-
+
+	In Data Analysis Process the all the variables have plotted in Bar/Box/Scatter Plot to observe the outliers/relationship
+	of variables with the target variables/skewness if present in the numerical varibles.
+	
+2. Feature Engineering:-
+	i. Feature Creation:- The Temporary Variable like the Year Variable. 3 New Variable were generated 
+		The Age of the House from the time the house was build till the time it was sold
+		The Age of the House from the time the house was modified till the time it was sold
+		The Age of the House from the time the Garage was build till the time it was sold
+		
+	ii. Missing Value Treatment:
+		For Numerical Variable:- The missing value was replaced with Median or Mode incase of numerical variable because of outlier present.
+		For Categorial Variable:- The missing value was categorized as a separate catgory incase of Categorial variable.
+		
+	iii. Skewness:
+		For Skewness the numerical variable was performed log transformation to handle the skewness.
+		
+	iv. Handling Rare categories features:
+		Categories containing less than 1 percent observation are categorized as Rare variables
+		
+	v. Feature scaling:
+		All variables are scaled using min max scalar so that all variables have equal magnitude.
+		
+3. Feature Selection
+	For Feature Selection we used Lasso regression as the Lasso regression penalizes variables to zero 
+	So only the variables that helps to predict the independent variables are left.
+	Out of the 81 variables using lasso regression 15 best variables are used for prediction.
+	
+4. 	Model Building
+	Random Forest and Multiple Linear Regression was the model chosen for model building. Both the model was build on the 15 variables.
+	Random Forest was chosen as the best model because Random Forest gave a good accuracy between the two.
+
+5. Model Validation:
+	Model Validation was calculated using Accuracy which was done on the test data which gave accuracy of more than 95%.
+	Also for more safety the model was tested using k fold validation with the accuracy measure as mean absolute error which gave error as 0.107 
+	after 10 folds
+	
+6. Model Deployment:
+	Finally The Model was Deployed using the Flask libraries in the Heroku App.
