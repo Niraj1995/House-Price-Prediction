@@ -108,10 +108,10 @@ This project includes all lifecycle in these data science project.
 	of variables with the target variables/skewness if present in the numerical varibles.
 	
 2. Feature Engineering:-
-	i. Feature Creation:- The Temporary Variable like the Year Variable. 3 New Variable were generated 
-		The Age of the House from the time the house was build till the time it was sold
-		The Age of the House from the time the house was modified till the time it was sold
-		The Age of the House from the time the Garage was build till the time it was sold
+	i. Feature Creation:- The Temporary Variable like the Year Variable. 3 New Variable were generated .
+		The Age of the House from the time the house was build till the time it was sold.
+		The Age of the House from the time the house was modified till the time it was sold.
+		The Age of the House from the time the Garage was build till the time it was sold.
 		
 	ii. Missing Value Treatment:
 		For Numerical Variable:- The missing value was replaced with Median or Mode incase of numerical variable because of outlier present.
@@ -138,7 +138,7 @@ This project includes all lifecycle in these data science project.
 5. Model Validation:
 	Model Validation was calculated using Accuracy which was done on the test data which gave accuracy of more than 95%.
 	Also for more safety the model was tested using k fold validation with the accuracy measure as mean absolute error which gave error as 0.107 
-	after 10 folds
+	after 10 folds.
 	
 6. Model Deployment:
 	Finally The Model was Deployed using the Flask libraries in the Heroku App.
